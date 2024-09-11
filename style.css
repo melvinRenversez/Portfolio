@@ -273,6 +273,28 @@ ul h1 {
 /* End Section CV  */
 
 
+/* Section Competence */
+
+.sec-competence {
+    background: #232323;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.sec-competence .file-content {
+    margin-top: 30px;
+    height: 600px;
+    width: 400px;
+    background: #cecece;
+}
+
+
+/* End Section Competence */
+
+
 /* Section stage  */
 
 .sec-stage {

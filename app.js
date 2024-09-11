@@ -1,41 +1,60 @@
 const ciDessus = document.getElementById('ci-dessus')
-const Accueil = document.getElementById('Accueil')
-const reseaux_contact = document.getElementById('reseaux_contact')
+
+
+const accueil = document.getElementById('accueil')
+const presentation = document.getElementById('presentation')
 const cv = document.getElementById('cv')
+const competence = document.getElementById('competence')
 const stage = document.getElementById('stage')
+const contact = document.getElementById('contact')
 
 
 ciDessus.addEventListener('click', (e) => {
     window.scrollTo({
-        top: 490,
+        top: 1200,
         behavior: 'smooth' // Optionnel : fait défiler en douceur
     });
 })
 
-Accueil.addEventListener('click', (e) => {
+accueil.addEventListener('click', (e) => {
     window.scrollTo({
         top: 0,
         behavior: 'smooth' // Optionnel : fait défiler en douceur
     });
 })
 
-reseaux_contact.addEventListener('click', (e) => {
+presentation.addEventListener('click', (e) => {
     window.scrollTo({
-        top: 0,
+        top: 700,
         behavior: 'smooth' // Optionnel : fait défiler en douceur
     });
 })
 
 cv.addEventListener('click', (e) => {
     window.scrollTo({
-        top: 490,
+        top: 1200,
+        behavior: 'smooth' // Optionnel : fait défiler en douceur
+    });
+})
+
+
+competence.addEventListener('click', (e) => {
+    window.scrollTo({
+        top: 1600,
         behavior: 'smooth' // Optionnel : fait défiler en douceur
     });
 })
 
 stage.addEventListener('click', (e) => {
     window.scrollTo({
-        top: 800,
+        top: 2300,
+        behavior: 'smooth' // Optionnel : fait défiler en douceur
+    });
+})
+
+contact.addEventListener('click', (e) => {
+    window.scrollTo({
+        top: 3140,
         behavior: 'smooth' // Optionnel : fait défiler en douceur
     });
 })
@@ -48,27 +67,42 @@ window.addEventListener('scroll', () => {
     console.log(`Scroll: ${scrollTop}px`);
 
 
-    if (scrollTop < 400) {
+    if (scrollTop < 500) {
         removeActif()
-        Accueil.classList.add('actif')
+        accueil.classList.add('actif')
     }
-    if (scrollTop >= 400) {
+    if (scrollTop >= 500) {
+        removeActif()
+        presentation.classList.add('actif')
+    }
+    if (scrollTop >= 1100) {
         removeActif()
         cv.classList.add('actif')
     }
-    if (scrollTop >= 690) {
+    if (scrollTop >= 1500) {
+        removeActif()
+        competence.classList.add('actif')
+    }
+    if (scrollTop >= 2200) {
         removeActif()
         stage.classList.add('actif')
     }
+    if (scrollTop >= 3100) {
+        removeActif()
+        contact.classList.add('actif')
+    }
+
 
 
 });
 
 function removeActif() {
-    Accueil.classList.remove('actif')
-    reseaux_contact.classList.remove('actif')
+    accueil.classList.remove('actif')
+    presentation.classList.remove('actif')
     cv.classList.remove('actif')
+    competence.classList.remove('actif')
     stage.classList.remove('actif')
+    contact.classList.remove('actif')
 }
 
 function downloadCV() {
