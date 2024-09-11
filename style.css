@@ -15,7 +15,7 @@
     font-family: Oswald;
 }
 
-.name-section{
+.name-section {
     padding-top: 20px;
     color: white;
     width: 100%;
@@ -37,6 +37,7 @@ nav {
     align-items: center;
     justify-content: end;
     box-shadow: 10px 0 10px #eee;
+    z-index: 1000;
 }
 
 nav::after {
@@ -135,6 +136,7 @@ ul h1 {
     color: #efefef;
 }
 
+
 /*      Start      */
 
 
@@ -142,18 +144,19 @@ ul h1 {
 
 .sec-accueil {
     background: #1E1E1E;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 30px;
 }
 
 .sec-accueil .content .nom-prenom {
     font-size: 100px;
     letter-spacing: 2px;
     font-family: Protest_Guerrilla;
-    margin-top: 100px;
+    margin-top: 120px;
     margin-left: 150px;
     color: rgb(190, 27, 27);
 }
@@ -169,15 +172,50 @@ ul h1 {
     color: #bebebe;
 }
 
+
 /* End Section Accueil  */
+
 
 /* Section Presentation  */
 
-.sec-presentation{
+.sec-presentation {
     background: #323232;
+    padding-bottom: 20px;
 }
 
+.sec-presentation .sec-content {
+    display: flex;
+}
+
+.sec-presentation .sec-content .left,
+.sec-presentation .sec-content .right {
+    width: 50%;
+    padding: 40px;
+}
+
+.sec-presentation .sec-content .right {
+    border-left: 2px solid white;
+}
+
+.sec-presentation .sec-content .left h1,
+.sec-presentation .sec-content .right h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.sec-presentation .sec-content .left p,
+.sec-presentation .sec-content .right p {
+    font-size: 25px;
+    text-align: center;
+    color: #cfcfcf;
+}
+
+
 /* End Section Presentation  */
+
 
 /* Section CV  */
 
@@ -231,6 +269,7 @@ ul h1 {
     color: #000;
 }
 
+
 /* End Section CV  */
 
 
@@ -259,28 +298,31 @@ ul h1 {
     text-decoration: underline;
 }
 
+
 /* End Section stage  */
 
 
 /* Section Contact */
 
-.sec-contact{
+.sec-contact {
     width: 100%;
     display: flex;
     flex-direction: column;
     background: #232323;
 }
+
 .sec-contact .sec-content {
     display: flex;
-
 }
-.sec-contact .left{
+
+.sec-contact .left {
     width: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.sec-contact .left .content-form{
+
+.sec-contact .left .content-form {
     width: 400px;
     height: 600px;
     border: 2px solid white;
@@ -288,7 +330,8 @@ ul h1 {
     position: relative;
     margin: 50px 0;
 }
-.sec-contact .left .content-form form{
+
+.sec-contact .left .content-form form {
     width: 100%;
     height: 100%;
     display: flex;
@@ -296,16 +339,20 @@ ul h1 {
     align-items: center;
     padding: 20px;
 }
+
 .sec-contact .left .content-form form h1 {
-    padding: 20px;
+    padding: 10px;
     color: white;
+    font-size: 40px;
 }
-.sec-contact .left .content-form form .input-field{
+
+.sec-contact .left .content-form form .input-field {
     width: 100%;
     position: relative;
     margin: 15px;
 }
-.sec-contact .left .content-form form .input-field.input label{
+
+.sec-contact .left .content-form form .input-field.input label {
     position: absolute;
     top: 25%;
     left: 30px;
@@ -313,7 +360,8 @@ ul h1 {
     pointer-events: none;
     transition: .3s;
 }
-.sec-contact .left .content-form form .input-field.textarea label{
+
+.sec-contact .left .content-form form .input-field.textarea label {
     position: absolute;
     top: 10px;
     left: 30px;
@@ -321,7 +369,8 @@ ul h1 {
     pointer-events: none;
     transition: .3s;
 }
-.sec-contact .left .content-form form .input-field input{
+
+.sec-contact .left .content-form form .input-field input {
     width: 100%;
     height: 45px;
     border-radius: 5px;
@@ -332,6 +381,25 @@ ul h1 {
     padding: 0px 30px;
 }
 
+input:-webkit-autofill {
+    appearance: none !important;
+    background-color: #232323 !important;
+    /* Change la couleur de fond */
+    color: white!important;
+    /* Couleur du texte */
+    -webkit-text-fill-color: white !important;
+    /* Remplit aussi le texte avec la couleur choisie */
+    background-image: none !important;
+    /* Supprime l'image de fond ajoutée par autofill */
+    box-shadow: 0 0 0px 1000px #232323 inset !important;
+    /* Supprime le style autofill */
+}
+
+.sec-contact .left .content-form form .input-field input:focus,
+.sec-contact .left .content-form form .input-field input:valid {
+    background: transparent;
+}
+
 .sec-contact .left .content-form form .input-field input:focus~label,
 .sec-contact .left .content-form form .input-field input:valid~label {
     top: -30%;
@@ -339,9 +407,15 @@ ul h1 {
     padding: 0px 10px;
     background: #232323;
 }
-.sec-contact .left .content-form form .input-field input:valid{
+
+.sec-contact .left .content-form form .input-field input:valid {
     border-color: #1CD679;
 }
+
+textarea {
+    resize: none;
+}
+
 .sec-contact .left .content-form form .input-field textarea:focus~label,
 .sec-contact .left .content-form form .input-field textarea:valid~label {
     top: -15px;
@@ -354,7 +428,7 @@ ul h1 {
     border-color: #1CD679;
 }
 
-.sec-contact .left .content-form form .input-field textarea{
+.sec-contact .left .content-form form .input-field textarea {
     width: 100%;
     height: 45px;
     border-radius: 5px;
@@ -365,7 +439,8 @@ ul h1 {
     padding: 10px 30px;
     height: 210px;
 }
-.sec-contact .left .content-form form button{
+
+.sec-contact .left .content-form form button {
     width: 100%;
     height: 40px;
     border-radius: 5px;
@@ -373,7 +448,7 @@ ul h1 {
     margin: 20px;
     cursor: pointer;
     color: white;
-    background: transparent; 
+    background: transparent;
     transition: .3s;
 }
 
@@ -382,7 +457,7 @@ ul h1 {
     border: 2px solid #1CD679;
 }
 
-.sec-contact .right{
+.sec-contact .right {
     width: 40%;
     display: flex;
     align-items: center;
@@ -390,19 +465,21 @@ ul h1 {
     border-left: 2px solid white;
 }
 
-.sec-contact .right .content{
+.sec-contact .right .content {
     width: 70%;
     height: min-content;
     padding: 20px;
 }
-.sec-contact .right .box{
+
+.sec-contact .right .box {
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
 }
-.sec-contact .right .box .border svg{
+
+.sec-contact .right .box .border svg {
     padding: 5px;
     border: 1px solid white;
     border-radius: 5px;
@@ -413,14 +490,25 @@ ul h1 {
     justify-content: center;
     margin-right: 10px;
 }
-.sec-contact .right .box svg{
+
+.sec-contact .right .box svg {
     /* padding: 5px; */
     height: 30px;
     fill: white;
 }
-.sec-contact .right h1{
+
+.sec-contact .right h1 {
     color: white;
 }
 
 
 /* End Section Contact */
+
+
+/*   test   */
+
+.sec-accueil,
+.sec-cv,
+.sec-stage {
+    /* display: none; */
+}
