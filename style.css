@@ -1,0 +1,426 @@
+@font-face {
+    font-family: Oswald;
+    src: url(assets/font/Oswald/Oswald-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Protest_Guerrilla;
+    src: url(assets/font/Protest_Guerrilla/ProtestGuerrilla-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Oswald;
+}
+
+.name-section{
+    padding-top: 20px;
+    color: white;
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-weight: 500;
+    font-family: Protest_Guerrilla;
+}
+
+nav {
+    background: #151515;
+    position: fixed;
+    width: 75%;
+    right: 0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    box-shadow: 10px 0 10px #eee;
+}
+
+nav::after {
+    content: "";
+    /* background: rgba(255, 217, 0, 0.53); */
+    position: absolute;
+    top: 0;
+    left: -120px;
+    border-top: 50px solid #151515;
+    border-right: 60px solid #151515;
+    border-left: 60px solid transparent;
+    border-bottom: 50px solid transparent;
+}
+
+nav hr {
+    width: 100%;
+    height: 2.5px;
+    background: white;
+    position: absolute;
+    bottom: 15px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+}
+
+ul li {
+    text-decoration: none;
+    list-style: none;
+    padding: 0 15px;
+    margin: 0 15px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    color: #efefef;
+    position: relative;
+}
+
+li::after {
+    transition: .5s width;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -18px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+li.actif::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -18px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+#stage.actif {
+    animation: none;
+}
+
+#stage {
+    animation: jump 1s infinite;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+ul h1 {
+    margin: 0 50px 0 70px;
+    font-size: 30px;
+    font-family: Protest_Guerrilla;
+    letter-spacing: 2px;
+    color: #efefef;
+}
+
+/*      Start      */
+
+
+/* Section Accueil  */
+
+.sec-accueil {
+    background: #1E1E1E;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sec-accueil .content .nom-prenom {
+    font-size: 100px;
+    letter-spacing: 2px;
+    font-family: Protest_Guerrilla;
+    margin-top: 100px;
+    margin-left: 150px;
+    color: rgb(190, 27, 27);
+}
+
+.sec-accueil .content p {
+    font-size: 40px;
+    width: 80%;
+    margin-left: 170px;
+    margin-right: 200px;
+    margin-top: 50px;
+    padding-left: 100px;
+    line-height: 60px;
+    color: #bebebe;
+}
+
+/* End Section Accueil  */
+
+/* Section Presentation  */
+
+.sec-presentation{
+    background: #323232;
+}
+
+/* End Section Presentation  */
+
+/* Section CV  */
+
+.sec-cv {
+    background: #121010;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sec-cv div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sec-cv div h1 {
+    color: white;
+    margin: 30px 0;
+}
+
+.sec-cv div .buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.sec-cv div .buttons a,
+.sec-cv div .buttons button {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    outline: none;
+    margin: 30px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 2px solid #dedede;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.sec-cv div .buttons a:hover,
+.sec-cv div .buttons button:hover {
+    background: #dedede;
+    color: #000;
+}
+
+/* End Section CV  */
+
+
+/* Section stage  */
+
+.sec-stage {
+    background: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec-stage p {
+    font-size: 40px;
+    letter-spacing: 1.5px;
+    width: 80%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: white;
+    text-align: center;
+}
+
+.sec-stage p span {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* End Section stage  */
+
+
+/* Section Contact */
+
+.sec-contact{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #232323;
+}
+.sec-contact .sec-content {
+    display: flex;
+
+}
+.sec-contact .left{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sec-contact .left .content-form{
+    width: 400px;
+    height: 600px;
+    border: 2px solid white;
+    border-radius: 10px;
+    position: relative;
+    margin: 50px 0;
+}
+.sec-contact .left .content-form form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.sec-contact .left .content-form form h1 {
+    padding: 20px;
+    color: white;
+}
+.sec-contact .left .content-form form .input-field{
+    width: 100%;
+    position: relative;
+    margin: 15px;
+}
+.sec-contact .left .content-form form .input-field.input label{
+    position: absolute;
+    top: 25%;
+    left: 30px;
+    color: white;
+    pointer-events: none;
+    transition: .3s;
+}
+.sec-contact .left .content-form form .input-field.textarea label{
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    color: white;
+    pointer-events: none;
+    transition: .3s;
+}
+.sec-contact .left .content-form form .input-field input{
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #CECECE;
+    background: transparent;
+    color: white;
+    padding: 0px 30px;
+}
+
+.sec-contact .left .content-form form .input-field input:focus~label,
+.sec-contact .left .content-form form .input-field input:valid~label {
+    top: -30%;
+    left: 20px;
+    padding: 0px 10px;
+    background: #232323;
+}
+.sec-contact .left .content-form form .input-field input:valid{
+    border-color: #1CD679;
+}
+.sec-contact .left .content-form form .input-field textarea:focus~label,
+.sec-contact .left .content-form form .input-field textarea:valid~label {
+    top: -15px;
+    left: 20px;
+    padding: 0px 10px;
+    background: #232323;
+}
+
+.sec-contact .left .content-form form .input-field textarea:valid {
+    border-color: #1CD679;
+}
+
+.sec-contact .left .content-form form .input-field textarea{
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #CECECE;
+    background: transparent;
+    color: white;
+    padding: 10px 30px;
+    height: 210px;
+}
+.sec-contact .left .content-form form button{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #CECECE;
+    margin: 20px;
+    cursor: pointer;
+    color: white;
+    background: transparent; 
+    transition: .3s;
+}
+
+.sec-contact .left .content-form form button:hover {
+    background: #1CD679;
+    border: 2px solid #1CD679;
+}
+
+.sec-contact .right{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 2px solid white;
+}
+
+.sec-contact .right .content{
+    width: 70%;
+    height: min-content;
+    padding: 20px;
+}
+.sec-contact .right .box{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.sec-contact .right .box .border svg{
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+.sec-contact .right .box svg{
+    /* padding: 5px; */
+    height: 30px;
+    fill: white;
+}
+.sec-contact .right h1{
+    color: white;
+}
+
+
+/* End Section Contact */
