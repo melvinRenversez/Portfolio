@@ -87,7 +87,7 @@ window.addEventListener('scroll', () => {
         removeActif()
         stage.classList.add('actif')
     }
-    if (scrollTop >= 3100) {
+    if (scrollTop >= 2970) {
         removeActif()
         contact.classList.add('actif')
     }
@@ -117,3 +117,14 @@ function downloadCV() {
     link.click();
     document.body.removeChild(link);
 }
+
+document.querySelectorAll('.copy').forEach(function(h1) {
+    h1.addEventListener('click', function() {
+        var email = h1.innerText; // Récupère le texte de l'élément cliqué
+        navigator.clipboard.writeText(email).then(function() {
+            console.log("Texte copié : " + email);
+        }).catch(function(error) {
+            console.error("Erreur lors de la copie : ", error);
+        });
+    });
+});

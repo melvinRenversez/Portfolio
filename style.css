@@ -349,6 +349,7 @@ ul h1 {
     display: flex;
     flex-direction: column;
     background: #232323;
+    padding-bottom: 10px;
 }
 
 .sec-contact .sec-content {
@@ -539,6 +540,15 @@ textarea {
 
 .sec-contact .right h1 {
     color: white;
+}
+
+.sec-contact .right h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+h1.copy {
+    cursor: pointer;
 }
 
 
