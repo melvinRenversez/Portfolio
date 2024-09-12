@@ -15,6 +15,24 @@
     font-family: Oswald;
 }
 
+body {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #676767;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+    /* border-radius: 10px; */
+}
+
 .name-section {
     padding-top: 20px;
     color: white;
