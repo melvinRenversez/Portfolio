@@ -1,6 +1,5 @@
 const ciDessus = document.getElementById('ci-dessus')
 
-
 const accueil = document.getElementById('accueil')
 const presentation = document.getElementById('presentation')
 const cv = document.getElementById('cv')
@@ -8,6 +7,7 @@ const competence = document.getElementById('competence')
 const stage = document.getElementById('stage')
 const contact = document.getElementById('contact')
 
+const popupDiv = document.getElementById('popup')
 
 ciDessus.addEventListener('click', (e) => {
     window.scrollTo({
@@ -47,7 +47,7 @@ competence.addEventListener('click', (e) => {
 
 stage.addEventListener('click', (e) => {
     window.scrollTo({
-        top: 2300,
+        top: 2444,
         behavior: 'smooth' // Optionnel : fait défiler en douceur
     });
 })
@@ -65,7 +65,6 @@ window.addEventListener('scroll', () => {
 
     // Afficher le niveau de défilement dans la console
     console.log(`Scroll: ${scrollTop}px`);
-
 
     if (scrollTop < 500) {
         removeActif()
@@ -122,9 +121,23 @@ document.querySelectorAll('.copy').forEach(function(h1) {
     h1.addEventListener('click', function() {
         var email = h1.innerText; // Récupère le texte de l'élément cliqué
         navigator.clipboard.writeText(email).then(function() {
+            let text = email + " copier dans le press papier"
+            popup(text)
             console.log("Texte copié : " + email);
         }).catch(function(error) {
             console.error("Erreur lors de la copie : ", error);
         });
     });
 });
+
+function popup(text) {
+    popupDiv.innerHTML = text
+    popupDiv.classList.add('actif')
+    setTimeout(() => {
+        closePopup()
+    }, 5000);
+}
+
+function closePopup() {
+    popupDiv.classList.remove('actif')
+}

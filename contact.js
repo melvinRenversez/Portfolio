@@ -14,7 +14,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     // Envoi du formulaire via EmailJS
     emailjs.sendForm(serviceID, templateID, this)
         .then(() => {
-            alert('Email envoyé avec succès à melvin.renversez@ltpdampierre.fr!');
+            popup("Email envoyé avec succès à melvin.")
         }, (err) => {
             alert('L\'envoi de l\'email a échoué!\r\n Response:\n ' + JSON.stringify(err));
         });
