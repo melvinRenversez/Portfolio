@@ -33,6 +33,20 @@ body {
     /* border-radius: 10px; */
 }
 
+.popup{
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 200px;
+    height: 80px;
+    background: rgba(233, 233, 233, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 5px #ffffff;
+}
+
 .name-section {
     padding-top: 20px;
     color: white;
@@ -307,8 +321,36 @@ ul h1 {
     height: 600px;
     width: 400px;
     background: #cecece;
+    position: relative;
 }
 
+.sec-competence .file-content embed {
+    width: 100%;
+    height: 100%;
+}
+
+.sec-competence a{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    outline: none;
+    margin: 30px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 2px solid #dedede;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.sec-competence a:hover {
+    background: #dedede;
+    color: #000;
+}
 
 /* End Section Competence */
 
