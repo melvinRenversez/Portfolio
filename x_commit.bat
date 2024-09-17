@@ -1,12 +1,14 @@
 @echo off
-REM Ajoute toutes les modifications au suivi
 git add .
 
-REM Effectue un commit avec un message
-git commit -m "a"
+set currentDate=%date%
 
-REM Pousse les modifications vers le référentiel distant
+set day=%currentDate:~0,2%
+set month=%currentDate:~3,2%
+set year=%currentDate:~-4%
+
+git commit -m %day%/%month%/%year%
+
 git push origin main
 
-REM Optionnel : affiche un message de confirmation
 echo Modifications commitées et poussées vers GitHub avec succès!
