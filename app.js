@@ -108,8 +108,8 @@ function downloadCV() {
     const link = document.createElement('a');
 
     // Spécifier l'URL du fichier PNG
-    link.href = 'assets/download/CV.png'; // Assurez-vous que ce chemin est correct
-    link.download = 'cv_melvin_renversez.png'; // Nom du fichier téléchargé
+    link.href = 'assets/download/CV.pdf'; // Assurez-vous que ce chemin est correct
+    link.download = 'CV_Melvin_Renversez.pdf'; // Nom du fichier téléchargé
 
     // Ajouter le lien au document, cliquer dessus pour déclencher le téléchargement, puis le supprimer
     document.body.appendChild(link);
