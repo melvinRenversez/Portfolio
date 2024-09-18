@@ -795,10 +795,10 @@ h1.copy {
     }
     .sec-presentation .sec-content .left p,
     .sec-presentation .sec-content .right p {
-        font-size: 15px;
+        font-size: 20px;
         text-align: center;
         color: #cfcfcf;
-        line-height: 30px;
+        line-height: 25px;
     }
     /* End Section Presentation  */
     /* Section CV  */
