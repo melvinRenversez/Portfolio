@@ -67,7 +67,7 @@ body {
     font-family: Protest_Guerrilla;
 }
 
-.menu-burger{
+.menu-burger {
     display: none;
 }
 
@@ -606,36 +606,34 @@ h1.copy {
 /* End Section Contact */
 
 @media screen and (max-width: 1440px) {
-    ul li{
+    ul li {
         font-size: 15px;
     }
     li::after {
         bottom: -22px;
     }
-    
     li.actif::after {
         bottom: -22px;
     }
 }
+
 @media screen and (max-width: 1270px) {
-    nav{
+    nav {
         width: 100%;
         justify-content: center;
     }
-    ul li{
+    ul li {
         font-size: 20px;
     }
     li::after {
         bottom: -18px;
     }
-    
     li.actif::after {
         bottom: -18px;
     }
 }
 
 @media screen and (max-width: 400px) {
-
     .name-section {
         padding-top: 20px;
         color: white;
@@ -647,30 +645,28 @@ h1.copy {
         font-weight: 500;
         font-family: Protest_Guerrilla;
     }
-
-    hr{
+    hr {
         width: 0;
         display: none;
     }
-
-    .menu-burger{
+    .menu-burger {
         width: 40px;
         height: 40px;
         /* background: white; */
         position: fixed;
         z-index: 100000;
+        display: block !important;
         top: 20px;
         right: 20px;
         pointer-events: all;
         transition: .5s;
         transform: rotate(0deg);
     }
-    .menu-burger.actif{
+    .menu-burger.actif {
         transform: rotate(360deg);
     }
-
     .menu-burger .open,
-    .menu-burger .close{
+    .menu-burger .close {
         width: 100%;
         height: 100%;
         position: absolute;
@@ -681,9 +677,8 @@ h1.copy {
         pointer-events: none;
         transition: 1s;
     }
-    
     .menu-burger .open.actif,
-    .menu-burger .close.actif{
+    .menu-burger .close.actif {
         width: 100%;
         height: 100%;
         position: absolute;
@@ -693,15 +688,13 @@ h1.copy {
         opacity: 1;
         pointer-events: none;
     }
-
     .menu-burger .open svg,
-    .menu-burger .close svg{
+    .menu-burger .close svg {
         width: 100%;
         height: 100%;
         pointer-events: none;
     }
-
-    nav{
+    nav {
         width: min-content;
         height: 0px;
         justify-content: center;
@@ -713,20 +706,20 @@ h1.copy {
         transition: 1s;
         opacity: 0;
     }
-    nav.actif{
+    nav.actif {
         opacity: 1;
         height: 400px;
         padding: 10px;
     }
-    nav::after{
+    nav::after {
         width: 0;
         height: 0;
         border: 0;
     }
-    ul{
+    ul {
         flex-direction: column;
     }
-    ul li{
+    ul li {
         font-size: 20px;
         padding: 5px 5px;
         margin: 5px 10px;
@@ -735,15 +728,10 @@ h1.copy {
     li::after {
         bottom: -5px;
     }
-    
     li.actif::after {
         bottom: -1px;
     }
-
-
-
     /* Section Accueil  */
-
     .sec-accueil {
         background: #1E1E1E;
         display: flex;
@@ -753,7 +741,6 @@ h1.copy {
         padding-bottom: 30px;
         position: relative;
     }
-
     .sec-accueil .content .nom-prenom {
         font-size: 50px;
         letter-spacing: 2px;
@@ -762,7 +749,6 @@ h1.copy {
         margin-left: 20px;
         color: rgb(190, 27, 27);
     }
-
     .sec-accueil .content p {
         font-size: 20px;
         width: 90%;
@@ -773,33 +759,24 @@ h1.copy {
         line-height: 30px;
         color: #bebebe;
     }
-
-
     /* End Section Accueil  */
-
-
     /* Section Presentation  */
-
     .sec-presentation {
         background: #323232;
         padding-bottom: 20px;
     }
-
     .sec-presentation .sec-content {
         display: flex;
         flex-direction: column;
     }
-
     .sec-presentation .sec-content .left,
     .sec-presentation .sec-content .right {
         width: 100%;
         padding: 10px;
     }
-
     .sec-presentation .sec-content .right {
         border-left: 0px solid white;
     }
-
     .sec-presentation .sec-content .left h1,
     .sec-presentation .sec-content .right h1 {
         width: 100%;
@@ -808,7 +785,6 @@ h1.copy {
         color: white;
         margin-bottom: 20px;
     }
-
     .sec-presentation .sec-content .left p,
     .sec-presentation .sec-content .right p {
         font-size: 15px;
@@ -816,13 +792,8 @@ h1.copy {
         color: #cfcfcf;
         line-height: 30px;
     }
-
-
     /* End Section Presentation  */
-
-
     /* Section CV  */
-
     .sec-cv {
         background: #121010;
         display: flex;
@@ -831,27 +802,23 @@ h1.copy {
         justify-content: center;
         position: relative;
     }
-
     .sec-cv div {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-
     .sec-cv div h1 {
         color: white;
         margin: 30px 0;
         width: 95%;
         text-align: center;
     }
-
     .sec-cv div .buttons {
         display: flex;
         flex-direction: column;
         width: 100%;
     }
-
     .sec-cv div .buttons a,
     .sec-cv div .buttons button {
         width: 80%;
@@ -870,21 +837,16 @@ h1.copy {
         transition: .5s;
         text-decoration: none;
     }
-
     .sec-cv div .buttons button {
         margin-bottom: 25px !important;
     }
-
     .sec-cv div .buttons a:hover,
     .sec-cv div .buttons button:hover {
         background: #dedede;
         color: #000;
     }
-
     /* End Section CV  */
-
     /* Section Competence */
-
     .sec-competence {
         background: #232323;
         display: flex;
@@ -893,7 +855,6 @@ h1.copy {
         justify-content: center;
         padding: 20px;
     }
-
     .sec-competence .file-content {
         margin-top: 30px;
         height: 600px;
@@ -901,12 +862,10 @@ h1.copy {
         background: #cecece;
         position: relative;
     }
-
     .sec-competence .file-content img {
         width: 100%;
         height: 100%;
     }
-
     .sec-competence a {
         width: 95%;
         height: 50px;
@@ -924,17 +883,12 @@ h1.copy {
         transition: .5s;
         text-decoration: none;
     }
-
     .sec-competence a:hover {
         background: #dedede;
         color: #000;
     }
-
-
     /* End Section Competence */
-
     /* Section stage  */
-
     .sec-stage {
         background: #1a1a1a;
         display: flex;
@@ -942,7 +896,6 @@ h1.copy {
         justify-content: center;
         align-items: center;
     }
-
     .sec-stage p {
         font-size: 20px;
         letter-spacing: 1px;
@@ -953,17 +906,12 @@ h1.copy {
         text-align: center;
         line-height: 25px;
     }
-
     .sec-stage p span {
         cursor: pointer;
         text-decoration: underline;
     }
-
-
     /* End Section stage  */
-
     /* Section Contact */
-
     .sec-contact {
         width: 100%;
         display: flex;
@@ -971,19 +919,16 @@ h1.copy {
         background: #232323;
         padding-bottom: 10px;
     }
-
     .sec-contact .sec-content {
         display: flex;
         flex-direction: column;
     }
-
     .sec-contact .left {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-
     .sec-contact .left .content-form {
         width: 90%;
         height: 600px;
@@ -992,7 +937,6 @@ h1.copy {
         position: relative;
         margin: 50px 0;
     }
-
     .sec-contact .left .content-form form {
         width: 100%;
         height: 100%;
@@ -1001,19 +945,16 @@ h1.copy {
         align-items: center;
         padding: 20px;
     }
-
     .sec-contact .left .content-form form h1 {
         padding: 10px;
         color: white;
         font-size: 40px;
     }
-
     .sec-contact .left .content-form form .input-field {
         width: 100%;
         position: relative;
         margin: 15px;
     }
-
     .sec-contact .left .content-form form .input-field.input label {
         position: absolute;
         top: 25%;
@@ -1022,7 +963,6 @@ h1.copy {
         pointer-events: none;
         transition: .3s;
     }
-
     .sec-contact .left .content-form form .input-field.textarea label {
         position: absolute;
         top: 10px;
@@ -1031,7 +971,6 @@ h1.copy {
         pointer-events: none;
         transition: .3s;
     }
-
     .sec-contact .left .content-form form .input-field input {
         width: 100%;
         height: 45px;
@@ -1042,7 +981,6 @@ h1.copy {
         color: white;
         padding: 0px 30px;
     }
-
     input:-webkit-autofill {
         appearance: none !important;
         background-color: #232323 !important;
@@ -1051,12 +989,10 @@ h1.copy {
         background-image: none !important;
         box-shadow: 0 0 0px 1000px #232323 inset !important;
     }
-
     .sec-contact .left .content-form form .input-field input:focus,
     .sec-contact .left .content-form form .input-field input:valid {
         background: transparent;
     }
-
     .sec-contact .left .content-form form .input-field input:focus~label,
     .sec-contact .left .content-form form .input-field input:valid~label {
         top: -30%;
@@ -1064,15 +1000,12 @@ h1.copy {
         padding: 0px 10px;
         background: #232323;
     }
-
     .sec-contact .left .content-form form .input-field input:valid {
         border-color: #1CD679;
     }
-
     textarea {
         resize: none;
     }
-
     .sec-contact .left .content-form form .input-field textarea:focus~label,
     .sec-contact .left .content-form form .input-field textarea:valid~label {
         top: -15px;
@@ -1080,11 +1013,9 @@ h1.copy {
         padding: 0px 10px;
         background: #232323;
     }
-
     .sec-contact .left .content-form form .input-field textarea:valid {
         border-color: #1CD679;
     }
-
     .sec-contact .left .content-form form .input-field textarea {
         width: 100%;
         height: 45px;
@@ -1096,7 +1027,6 @@ h1.copy {
         padding: 10px 30px;
         height: 210px;
     }
-
     .sec-contact .left .content-form form button {
         width: 100%;
         height: 40px;
@@ -1108,12 +1038,10 @@ h1.copy {
         background: transparent;
         transition: .3s;
     }
-
     .sec-contact .left .content-form form button:hover {
         background: #1CD679;
         border: 2px solid #1CD679;
     }
-
     .sec-contact .right {
         width: 100%;
         display: flex;
@@ -1122,14 +1050,12 @@ h1.copy {
         border-left: 0px solid white;
         border-top: 2px solid white;
     }
-
     .sec-contact .right .content {
         width: 100%;
         height: min-content;
         padding: 20px;
         position: relative;
     }
-
     .sec-contact .right .box {
         width: 100%;
         margin-top: 20px;
@@ -1137,7 +1063,6 @@ h1.copy {
         display: flex;
         align-items: center;
     }
-
     .sec-contact .right .box .border svg {
         padding: 5px;
         border: 1px solid white;
@@ -1149,27 +1074,20 @@ h1.copy {
         justify-content: center;
         margin-right: 10px;
     }
-
     .sec-contact .right .box .border svg {
         /* padding: 5px; */
         height: 30px;
         fill: white;
     }
-
     .sec-contact .right h1 {
         color: white;
     }
-
     .sec-contact .right h1 a {
         color: white;
         text-decoration: none;
     }
-
     h1.copy {
         cursor: pointer;
     }
-
-
     /* End Section Contact */
-
 }
