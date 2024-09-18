@@ -641,7 +641,7 @@ h1.copy {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .name-section {
         padding-top: 20px;
         color: white;
@@ -905,7 +905,7 @@ h1.copy {
         align-items: center;
     }
     .sec-stage p {
-        font-size: 20px;
+        font-size: 21px;
         letter-spacing: 1px;
         width: 90%;
         margin-top: 10px;
