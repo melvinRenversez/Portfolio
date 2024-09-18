@@ -12,28 +12,28 @@ const popupDiv = document.getElementById('popup')
 ciDessus.addEventListener('click', (e) => {
     window.scrollTo({
         top: 1200,
-        behavior: 'smooth' // Optionnel : fait défiler en douceur
+        behavior: 'smooth'
     });
 })
 
 accueil.addEventListener('click', (e) => {
     window.scrollTo({
         top: 0,
-        behavior: 'smooth' // Optionnel : fait défiler en douceur
+        behavior: 'smooth'
     });
 })
 
 presentation.addEventListener('click', (e) => {
     window.scrollTo({
         top: 700,
-        behavior: 'smooth' // Optionnel : fait défiler en douceur
+        behavior: 'smooth'
     });
 })
 
 cv.addEventListener('click', (e) => {
     window.scrollTo({
         top: 1200,
-        behavior: 'smooth' // Optionnel : fait défiler en douceur
+        behavior: 'smooth'
     });
 })
 
@@ -41,29 +41,27 @@ cv.addEventListener('click', (e) => {
 competence.addEventListener('click', (e) => {
     window.scrollTo({
         top: 1600,
-        behavior: 'smooth' // Optionnel : fait défiler en douceur
+        behavior: 'smooth'
     });
 })
 
 stage.addEventListener('click', (e) => {
     window.scrollTo({
         top: 2444,
-        behavior: 'smooth' // Optionnel : fait défiler en douceur
+        behavior: 'smooth'
     });
 })
 
 contact.addEventListener('click', (e) => {
     window.scrollTo({
         top: 3140,
-        behavior: 'smooth' // Optionnel : fait défiler en douceur
+        behavior: 'smooth'
     });
 })
 
 window.addEventListener('scroll', () => {
-    // Obtenir le niveau de défilement vertical
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-    // Afficher le niveau de défilement dans la console
     console.log(`Scroll: ${scrollTop}px`);
 
     if (scrollTop < 500) {
@@ -107,11 +105,9 @@ function removeActif() {
 function downloadCV() {
     const link = document.createElement('a');
 
-    // Spécifier l'URL du fichier PNG
-    link.href = 'assets/download/CV.pdf'; // Assurez-vous que ce chemin est correct
-    link.download = 'CV_Melvin_Renversez.pdf'; // Nom du fichier téléchargé
+    link.href = 'assets/download/CV.pdf';
+    link.download = 'CV_Melvin_Renversez.pdf';
 
-    // Ajouter le lien au document, cliquer dessus pour déclencher le téléchargement, puis le supprimer
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -119,7 +115,7 @@ function downloadCV() {
 
 document.querySelectorAll('.copy').forEach(function(h1) {
     h1.addEventListener('click', function() {
-        var email = h1.innerText; // Récupère le texte de l'élément cliqué
+        var email = h1.innerText;
         navigator.clipboard.writeText(email).then(function() {
             let text = email + " copier dans le press papier"
             popup(text)

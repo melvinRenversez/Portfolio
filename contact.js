@@ -1,17 +1,13 @@
-// Initialisation d'EmailJS
 (function() {
-    emailjs.init("4wXxxOITTUo3oj8FB"); // Remplacez par votre User ID EmailJS
+    emailjs.init("4wXxxOITTUo3oj8FB");
 })();
 
-// Gestion de la soumission du formulaire
 document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Empêche le rechargement de la page
+    event.preventDefault();
 
-    // Paramètres EmailJS
-    const serviceID = 'service_bq3858t'; // Remplacez par votre service ID EmailJS
-    const templateID = 'template_semal8g'; // Remplacez par votre template ID EmailJS
+    const serviceID = 'service_bq3858t'; 
+    const templateID = 'template_semal8g';
 
-    // Envoi du formulaire via EmailJS
     emailjs.sendForm(serviceID, templateID, this)
         .then(() => {
             popup("Email envoyé avec succès à melvin.")
