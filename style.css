@@ -658,6 +658,11 @@ h1.copy {
         top: 20px;
         right: 20px;
         pointer-events: all;
+        transition: .5s;
+        transform: rotate('0deg');
+    }
+    .menu-burger.actif{
+        transform: rotate('360deg');
     }
 
     .menu-burger .open,
@@ -670,8 +675,7 @@ h1.copy {
         justify-content: center;
         opacity: 0;
         pointer-events: none;
-        transition: .5s;
-        transform: rotateZ('360deg');
+        transition: 1s;
     }
     
     .menu-burger .open.actif,
@@ -684,7 +688,6 @@ h1.copy {
         justify-content: center;
         opacity: 1;
         pointer-events: none;
-        transform: rotateZ('0deg');
     }
 
     .menu-burger .open svg,
