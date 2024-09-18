@@ -67,6 +67,10 @@ body {
     font-family: Protest_Guerrilla;
 }
 
+.menu-burger{
+    display: none;
+}
+
 nav {
     background: #151515;
     position: fixed;
