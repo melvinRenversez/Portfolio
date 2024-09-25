@@ -641,7 +641,7 @@ h1.copy {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1100px) {
     .name-section {
         padding-top: 20px;
         color: white;
@@ -864,11 +864,11 @@ h1.copy {
         padding: 20px;
     }
     .sec-competence .file-content {
-        margin-top: 30px;
-        height: 600px;
         width: 95%;
         background: #cecece;
         position: relative;
+        height: auto;
+        overflow: hidden;
     }
     .sec-competence .file-content img {
         width: 100%;
