@@ -1,3 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
+    display: flex;
+    justify-content: center;
+}
+
+.retour{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.container{
+    width: 80%;
     background: red;
+    padding: 30px;
+}
+section{
+    border-bottom: 2px solid black;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: 50% 50% ;
+}
+
+.article{
+    background: orange;
+    margin: 10px;9
+}
+
+.article .titre{
+    width: 100%;
+    font-size: 20px;
+    padding: 20px 20px 0px 20px;
+}
+
+.article .content{
+    width: 100%;
+    font-size: 15px;
+    padding: 20px;
 }
