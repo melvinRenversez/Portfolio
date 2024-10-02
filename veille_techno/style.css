@@ -1,3 +1,10 @@
+:root {
+    --background: #000;
+    --background-alternative: #232323;
+    --primery-color: #fff;
+    --inverse: #676767;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +14,15 @@
 body {
     display: flex;
     justify-content: center;
-    background: #000;
+    background: var(--background);
+    transition: background 1s, color 1s;
+}
+
+body.actif {
+    --background: #fff;
+    --background-alternative: #dedede;
+    --primery-color: #000;
+    --inverse: #383838;
 }
 
 ::-webkit-scrollbar {
@@ -15,13 +30,77 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #676767;
+    background-color: var(--inverse);
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #000;
-    /* border-radius: 10px; */
+    background: var(--background);
+}
+
+.colorSwitch {
+    background: var(--primery-color);
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 60px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.circle {
+    background: var(--background);
+    position: absolute;
+    left: 5px;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    transition: .3s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle.actif {
+    left: 35px !important;
+}
+
+.colorMode {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease-out;
+}
+
+.colorMode svg {
+    width: 15px;
+    fill: var(--primery-color);
+}
+
+.circle .colorMode:nth-child(1) {
+    opacity: 1;
+    transform: rotateZ(0deg);
+}
+
+.circle .colorMode:nth-child(2) {
+    opacity: 0;
+    transform: rotateZ(0deg);
+}
+
+.circle.actif .colorMode:nth-child(1) {
+    opacity: 0;
+    transform: rotateZ(720deg);
+}
+
+.circle.actif .colorMode:nth-child(2) {
+    opacity: 1;
+    transform: rotateZ(720deg);
 }
 
 .retour {
@@ -29,28 +108,31 @@ body {
     top: 30px;
     left: 20px;
     text-decoration: none;
-    color: #000;
-    background: #fff;
+    color: var(--background);
+    background: var(--primery-color);
     border-radius: 20px;
     font-weight: 1000;
     font-size: 15px;
     padding: 10px 20px;
-    box-shadow: 0px 0px 10px #fff;
+    box-shadow: 0px 0px 10px var(--primery-color);
+    transition: background 1s, color 1s;
 }
 
 .container {
     width: 80%;
-    background: #232323;
+    background: var(--background-alternative);
+    transition: background 1s;
     padding: 30px;
 }
 
 section {
     /* border: 2px solid black; */
     position: relative;
-    border-bottom: 5px solid #000;
+    border-bottom: 5px solid var(--background);
     padding-bottom: 20px;
     display: flex;
     flex-direction: column;
+    transition: border 1s;
 }
 
 section:last-child {
@@ -63,9 +145,9 @@ section:last-child {
     white-space: nowrap;
     padding: 20px;
     font-size: 35px;
-    color: white;
-    border-bottom: 2px solid#fff;
-    /* text-decoration: underline; */
+    color: var(--primery-color);
+    border-bottom: 2px solid var(--primery-color);
+    transition: color 1s, border 1s;
 }
 
 .articles {
@@ -76,10 +158,11 @@ section:last-child {
 }
 
 .article {
-    border-left: 3px solid #fff;
-    color: white;
-    /* margin: 10px; */
+    border-left: 3px solid var(--primery-color);
+    color: var(--primery-color);
+    transition: color 1s;
     flex: 1 1 100%;
+    transition: border 1s;
 }
 
 .articles .article:nth-child(2n),
@@ -104,5 +187,5 @@ section:last-child {
     bottom: -10px;
     right: 20px;
     text-align: right;
-    color: white;
+    color: var(--primery-color);
 }
