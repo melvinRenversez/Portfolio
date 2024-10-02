@@ -89,7 +89,7 @@ nav::after {
     /* background: rgba(255, 217, 0, 0.53); */
     position: absolute;
     top: 0;
-    left: -120px;
+    left: -119px;
     border-top: 50px solid #151515;
     border-right: 60px solid #151515;
     border-left: 60px solid transparent;
@@ -104,12 +104,13 @@ nav hr {
     bottom: 15px;
 }
 
-ul {
+nav ul {
     display: flex;
     align-items: center;
 }
 
-ul li {
+nav ul li,
+nav ul a {
     text-decoration: none;
     list-style: none;
     padding: 0 15px;
@@ -683,7 +684,7 @@ h1.copy {
         justify-content: center;
         opacity: 0;
         pointer-events: none;
-        transition: 1s;
+        transition: .5s;
     }
     .menu-burger .open.actif,
     .menu-burger .close.actif {
@@ -727,10 +728,11 @@ h1.copy {
     ul {
         flex-direction: column;
     }
-    ul li {
+    ul li,
+    ul a {
         font-size: 20px;
-        padding: 5px 5px;
-        margin: 5px 10px;
+        padding: 5px 5px !important;
+        margin: 5px 10px !important;
         white-space: nowrap;
     }
     li::after {
