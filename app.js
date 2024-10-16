@@ -9,6 +9,11 @@ const contact = document.getElementById('contact')
 
 const popupDiv = document.getElementById('popup')
 
+const colorSwitch = document.getElementById('colorSwitch')
+const circle = document.getElementById('circle')
+
+var actif = false
+
 ciDessus.addEventListener('click', (e) => {
     window.scrollTo({
         top: 1200,
@@ -137,3 +142,15 @@ function popup(text) {
 function closePopup() {
     popupDiv.classList.remove('actif')
 }
+
+colorSwitch.addEventListener('click', () => {
+    if (actif == false) {
+        circle.classList.add('actif')
+        document.body.classList.add('actif')
+        actif = true
+    } else {
+        circle.classList.remove('actif')
+        document.body.classList.remove('actif')
+        actif = false
+    }
+})

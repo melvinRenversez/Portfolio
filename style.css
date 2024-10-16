@@ -8,6 +8,18 @@
     src: url(assets/font/Protest_Guerrilla/ProtestGuerrilla-Regular.ttf);
 }
 
+:root{
+    --nav-background: #151515;
+    --accueil-background: #1E1E1E;
+    --presentation-background: #323232;
+    --cv-background: #121010;
+    --competence-background: #232323;
+    --stage-background: #1a1a1a;
+    --contact-background: #232323;
+    --primery-color: #ffffff;
+    --circle-switch: #000000;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +29,18 @@
 
 body {
     scroll-behavior: smooth;
+}
+
+body.actif {
+    --nav-background: #efefef;
+    --accueil-background: #dbdbdb;
+    --presentation-background: #ababab;
+    --cv-background: #9a9a9a;
+    --competence-background: #bebebe;
+    --stage-background: #acacac;
+    --contact-background: #bfbfbf;
+    --primery-color: #000000;
+    --circle-switch: #ffffff;
 }
 
 ::-webkit-scrollbar {
@@ -29,8 +53,70 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: #000;
+    background: var(--circle-switch);
     /* border-radius: 10px; */
+}
+
+.colorSwitch {
+    background: var(--primery-color);
+    width: 60px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.circle {
+    background: var(--circle-switch);
+    position: absolute;
+    left: 15px;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    transition: .3s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle.actif {
+    left: 45px !important;
+}
+
+.colorMode {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease-out;
+}
+
+.colorMode svg {
+    width: 15px;
+    fill: var(--primery-color);
+}
+
+.circle .colorMode:nth-child(1) {
+    opacity: 1;
+    transform: rotateZ(0deg);
+}
+
+.circle .colorMode:nth-child(2) {
+    opacity: 0;
+    transform: rotateZ(0deg);
+}
+
+.circle.actif .colorMode:nth-child(1) {
+    opacity: 0;
+    transform: rotateZ(720deg);
+}
+
+.circle.actif .colorMode:nth-child(2) {
+    opacity: 1;
+    transform: rotateZ(720deg);
 }
 
 .popup {
@@ -57,7 +143,7 @@ body {
 
 .name-section {
     padding-top: 20px;
-    color: white;
+    color: var(--primery-color);
     width: 100%;
     font-size: 40px;
     text-align: center;
@@ -65,6 +151,7 @@ body {
     letter-spacing: 10px;
     font-weight: 500;
     font-family: Protest_Guerrilla;
+    transition: background 1s, color 1s;
 }
 
 .menu-burger {
@@ -72,36 +159,39 @@ body {
 }
 
 nav {
-    background: #151515;
+    background: var(--nav-background);
     position: fixed;
-    width: 75%;
+    width: auto;
     right: 0;
+    padding-left: 10px;
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: end;
     box-shadow: 10px 0 10px #eee;
     z-index: 1000;
+    transition: background 1s, color 1s;
 }
 
 nav::after {
     content: "";
-    /* background: rgba(255, 217, 0, 0.53); */
     position: absolute;
     top: 0;
     left: -119px;
-    border-top: 50px solid #151515;
-    border-right: 60px solid #151515;
+    border-top: 50px solid var(--nav-background);
+    border-right: 60px solid var(--nav-background);
     border-left: 60px solid transparent;
     border-bottom: 50px solid transparent;
+    transition: background 1s, color 1s, border 1s;
 }
 
 nav hr {
     width: 100%;
     height: 2.5px;
-    background: white;
+    background: var(--primery-color);
     position: absolute;
     bottom: 15px;
+    transition: background 1s, color 1s;
 }
 
 nav ul {
@@ -118,9 +208,10 @@ nav ul a {
     font-size: 20px;
     letter-spacing: 2px;
     cursor: pointer;
-    color: #efefef;
+    color: var(--primery-color);
     position: relative;
     text-align: center;
+    transition: background 1s, color 1s;
 }
 
 li::after {
@@ -128,24 +219,26 @@ li::after {
     content: "";
     width: 0%;
     height: 3px;
-    background: white;
+    background: var(--primery-color);
     position: absolute;
     left: 0;
     bottom: -18px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
+    transition: background 1s, color 1s;
 }
 
 li.actif::after {
     content: "";
     width: 100%;
     height: 3px;
-    background: white;
+    background: var(--primery-color);
     position: absolute;
     left: 0;
     bottom: -18px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
+    transition: background 1s, color 1s;
 }
 
 #stage.actif {
@@ -189,13 +282,14 @@ ul h1 {
 /* Section Accueil  */
 
 .sec-accueil {
-    background: #1E1E1E;
+    background: var(--accueil-background);
     /* height: 100vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-bottom: 30px;
+    transition: background 1s, color 1s;
 }
 
 .sec-accueil .content .nom-prenom {
@@ -215,7 +309,8 @@ ul h1 {
     margin-top: 50px;
     padding-left: 100px;
     line-height: 60px;
-    color: #bebebe;
+    color: var(--primery-color);
+    transition: background 1s, color 1s, border 1s;
 }
 
 
@@ -225,8 +320,9 @@ ul h1 {
 /* Section Presentation  */
 
 .sec-presentation {
-    background: #323232;
+    background: var(--presentation-background);
     padding-bottom: 20px;
+    transition: background 1s, color 1s;
 }
 
 .sec-presentation .sec-content {
@@ -248,15 +344,17 @@ ul h1 {
     width: 100%;
     text-align: center;
     font-size: 30px;
-    color: white;
+    color: var(--primery-color);
     margin-bottom: 20px;
+    transition: background 1s, color 1s;
 }
 
 .sec-presentation .sec-content .left p,
 .sec-presentation .sec-content .right p {
     font-size: 25px;
     text-align: center;
-    color: #cfcfcf;
+    color: var(--primery-color);
+    transition: background 1s, color 1s;
 }
 
 
@@ -266,11 +364,12 @@ ul h1 {
 /* Section CV  */
 
 .sec-cv {
-    background: #121010;
+    background: var(--cv-background);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: background 1s, color 1s;
 }
 
 .sec-cv div {
@@ -281,8 +380,9 @@ ul h1 {
 }
 
 .sec-cv div h1 {
-    color: white;
+    color: var(--primery-color);
     margin: 30px 0;
+    transition: background 1s, color 1s;
 }
 
 .sec-cv div .buttons {
@@ -301,12 +401,13 @@ ul h1 {
     justify-content: center;
     align-items: center;
     background: transparent;
-    border: 2px solid #dedede;
+    border: 2px solid var(--primery-color);
     font-size: 20px;
-    color: white;
+    color: var(--primery-color);
     cursor: pointer;
     transition: .5s;
     text-decoration: none;
+    transition: background 1s, color 1s, border 1s;
 }
 
 .sec-cv div .buttons a:hover,
@@ -322,12 +423,13 @@ ul h1 {
 /* Section Competence */
 
 .sec-competence {
-    background: #232323;
+    background: var(--competence-background);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
+    transition: background 1s, color 1s;
 }
 
 .sec-competence .file-content {
@@ -353,12 +455,13 @@ ul h1 {
     justify-content: center;
     align-items: center;
     background: transparent;
-    border: 2px solid #dedede;
+    border: 2px solid var(--primery-color);
     font-size: 20px;
-    color: white;
+    color: var(--primery-color);
     cursor: pointer;
     transition: .5s;
     text-decoration: none;
+    transition: background 1s, color 1s, border 1s;
 }
 
 .sec-competence a:hover {
@@ -373,11 +476,12 @@ ul h1 {
 /* Section stage  */
 
 .sec-stage {
-    background: #1a1a1a;
+    background: var(--stage-background);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: background 1s, color 1s;
 }
 
 .sec-stage p {
@@ -386,8 +490,9 @@ ul h1 {
     width: 80%;
     margin-top: 50px;
     margin-bottom: 30px;
-    color: white;
+    color: var(--primery-color);
     text-align: center;
+    transition: background 1s, color 1s;
 }
 
 .sec-stage p span {
@@ -402,12 +507,13 @@ ul h1 {
 /* Section Contact */
 
 .sec-contact {
+    background:var(--contact-background);
     position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
-    background: #232323;
     padding-bottom: 10px;
+    transition: background 1s, color 1s;
 }
 
 .sec-contact .sec-content {
@@ -424,10 +530,11 @@ ul h1 {
 .sec-contact .left .content-form {
     width: 400px;
     height: 600px;
-    border: 2px solid white;
+    border: 2px solid var(--primery-color);
     border-radius: 10px;
     position: relative;
     margin: 50px 0;
+    transition: background 1s, color 1s, border 1s;
 }
 
 .sec-contact .left .content-form form {
@@ -441,8 +548,9 @@ ul h1 {
 
 .sec-contact .left .content-form form h1 {
     padding: 10px;
-    color: white;
+    color: var(--primery-color);
     font-size: 40px;
+    transition: background 1s, color 1s;
 }
 
 .sec-contact .left .content-form form .input-field {
@@ -455,18 +563,20 @@ ul h1 {
     position: absolute;
     top: 25%;
     left: 30px;
-    color: white;
+    color: var(--primery-color);
     pointer-events: none;
     transition: .3s;
+    transition: background 1s, color 1s;
 }
 
 .sec-contact .left .content-form form .input-field.textarea label {
     position: absolute;
     top: 10px;
     left: 30px;
-    color: white;
+    color: var(--primery-color);
     pointer-events: none;
     transition: .3s;
+    transition: background 1s, color 1s;
 }
 
 .sec-contact .left .content-form form .input-field input {
@@ -474,10 +584,11 @@ ul h1 {
     height: 45px;
     border-radius: 5px;
     outline: none;
-    border: 2px solid #CECECE;
+    border: 2px solid var(--primery-color);
     background: transparent;
-    color: white;
+    color: var(--primery-color);
     padding: 0px 30px;
+    transition: background 1s, color 1s, border 1s;
 }
 
 input:-webkit-autofill {
@@ -515,7 +626,8 @@ textarea {
     top: -15px;
     left: 20px;
     padding: 0px 10px;
-    background: #232323;
+    background: var(--primery-color) ;
+    transition: background 1s, color 1s;
 }
 
 .sec-contact .left .content-form form .input-field textarea:valid {
@@ -527,23 +639,25 @@ textarea {
     height: 45px;
     border-radius: 5px;
     outline: none;
-    border: 2px solid #CECECE;
+    border: 2px solid var(--primery-color);
     background: transparent;
-    color: white;
+    color: var(--primery-color);
     padding: 10px 30px;
     height: 210px;
+    transition: background 1s, color 1s, border 1s;
 }
 
 .sec-contact .left .content-form form button {
     width: 100%;
     height: 40px;
     border-radius: 5px;
-    border: 2px solid #CECECE;
+    border: 2px solid var(--primery-color);
     margin: 20px;
     cursor: pointer;
-    color: white;
+    color: var(--primery-color);
     background: transparent;
     transition: .3s;
+    transition: background 1s, color 1s, border 1s;
 }
 
 .sec-contact .left .content-form form button:hover {
@@ -556,7 +670,8 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-left: 2px solid white;
+    border-left: 2px solid var(--primery-color);
+    transition: background 1s, color 1s, border 1s;
 }
 
 .sec-contact .right .content {
@@ -575,7 +690,7 @@ textarea {
 
 .sec-contact .right .box .border svg {
     padding: 5px;
-    border: 1px solid white;
+    border: 1px solid var(--primery-color);
     border-radius: 5px;
     width: 30px;
     height: 30px;
@@ -583,21 +698,25 @@ textarea {
     align-items: center;
     justify-content: center;
     margin-right: 10px;
+    transition: background 1s, color 1s, border 1s !important;
 }
 
 .sec-contact .right .box .border svg {
     /* padding: 5px; */
     height: 30px;
-    fill: white;
+    fill: var(--primery-color);
+    transition: background 1s, color 1s, fill 1s !important;
 }
 
 .sec-contact .right h1 {
-    color: white;
+    color: var(--primery-color);
+    transition: background 1s, color 1s;
 }
 
 .sec-contact .right h1 a {
-    color: white;
+    color: var(--primery-color);
     text-decoration: none;
+    transition: background 1s, color 1s;
 }
 
 h1.copy {
@@ -608,7 +727,8 @@ h1.copy {
     position: absolute;
     bottom: 20px;
     right: 20px;
-    color: white;
+    color: var(--primery-color);
+    transition: background 1s, color 1s;
 }
 
 
