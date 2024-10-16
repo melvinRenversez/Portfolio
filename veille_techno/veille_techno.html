@@ -26,196 +26,111 @@
 
     <div class="container">
         <section>
-            <div class="date">
-                9 Novembre 2024
+            <div class="titlesDate">
+                <div class="date">
+                    15 octobre 2024
+                </div>
             </div>
             <div class="articles">
 
                 <div class="article">
                     <div class="titre">
-                        Mise a jour 23EW15
+                        Correction de failles de sécurité
                     </div>
                     <div class="content">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora in perferendis veritatis vel voluptatibus distinctio quas nulla voluptas itaque hic quaerat, suscipit, odit nobis officiis, modi fuga? Pariatur facilis hic, quaerat aliquid expedita voluptas?
-                        Officia perferendis rem sint voluptatibus id totam dignissimos similique animi eaque ducimus? Iusto nam rem at nihil numquam. Dolores expedita repellendus quaerat, ducimus excepturi eum, placeat, atque iusto quae maxime ullam esse
-                        omnis blanditiis voluptas. Saepe!
+                        Le dernier patch a ciblé des vulnérabilités critiques liées à l'injection de code. Ces failles permettaient à des attaquants d'exécuter du code non autorisé dans des environnements JavaScript. Les développeurs ont mis en place des améliorations dans le filtrage des entrées et la validation des données pour rendre l'exploitation plus difficile. Ces corrections incluent des vérifications supplémentaires sur les API exposées qui traitent des données sensibles, renforçant ainsi la sécurité des applications. Cela est particulièrement crucial pour les applications web qui interagissent avec des utilisateurs et des données externes, car la sécurité est un enjeu majeur dans le développement moderne.
                     </div>
                 </div>
                 <div class="article">
                     <div class="titre">
-                        Lorem, ipsum dolor. 1
+                        Améliorations de la gestion des promesses
                     </div>
                     <div class="content">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt officia tempora ducimus ipsa eius iste, nulla obcaecati a sit exercitationem. Dolorem recusandae nisi delectus quibusdam ducimus. Recusandae ullam excepturi asperiores fugiat blanditiis
-                        error perspiciatis! Perferendis optio alias distinctio, ex voluptatibus, culpa totam quam eveniet architecto odit rem hic praesentium molestias quibusdam modi adipisci excepturi obcaecati cumque maxime. Dicta quibusdam sit nobis
-                        itaque, blanditiis illo recusandae totam ad sequi nulla ipsum!
+                        Les promesses jouent un rôle central dans la gestion de l'asynchronicité en JavaScript. Les améliorations récentes ont introduit des mécanismes pour mieux gérer les objets externes lors de la résolution de promesses. Cela permet d'éviter des comportements imprévus, comme les fuites de mémoire, qui peuvent survenir lorsque des objets non valides sont manipulés. Les changements apportés rendent les chaînes de promesses plus fiables et robustes, facilitant la détection des erreurs et le débogage dans les applications qui utilisent intensivement les promesses. Cela contribue à créer une expérience de développement plus fluide et moins sujette aux erreurs.
                     </div>
                 </div>
                 <div class="article">
                     <div class="titre">
-                        Lorem, ipsum dolor. 2
+                        Mises à jour des dépendances
                     </div>
                     <div class="content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, accusantium doloremque quas dicta architecto iure natus! Quod vel est eos consequuntur nihil sint vitae, aperiam illum laborum atque quibusdam esse delectus porro unde eius dolore blanditiis
-                        temporibus sunt placeat fuga assumenda maxime, debitis fugiat? Esse, natus quia obcaecati consequatur architecto aperiam sequi amet, vel quibusdam, voluptatum totam ut facilis optio non? Esse assumenda, suscipit tempora vel repellat
-                        itaque officiis excepturi!
-                    </div>
-                </div>
-                <div class="article">
-                    <div class="titre">
-                        Lorem, ipsum dolor. 2
-                    </div>
-                    <div class="content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, accusantium doloremque quas dicta architecto iure natus! Quod vel est eos consequuntur nihil sint vitae, aperiam illum laborum atque quibusdam esse delectus porro unde eius dolore blanditiis
-                        temporibus sunt placeat fuga assumenda maxime, debitis fugiat? Esse, natus quia obcaecati consequatur architecto aperiam sequi amet, vel quibusdam, voluptatum totam ut facilis optio non? Esse assumenda, suscipit tempora vel repellat
-                        itaque officiis excepturi!
+                        Le patch a également mis l'accent sur la mise à jour des dépendances critiques utilisées par les moteurs JavaScript. En maintenant ces bibliothèques à jour, les développeurs réduisent le risque d'exposition à des vulnérabilités connues. Cela inclut des bibliothèques utilisées pour le parsing, la gestion de la mémoire et d'autres fonctionnalités essentielles. Cette initiative vise à garantir que l'écosystème JavaScript reste sécurisé et performant, en prévenant l'utilisation de versions obsolètes qui pourraient contenir des failles de sécurité. La mise à jour régulière des dépendances est une bonne pratique de développement, car elle assure que les applications restent protégées contre les menaces potentielles.
                     </div>
                 </div>
             </div>
         </section>
         <section>
-            <div class="date">
-                30 Octobre 2024
+            <div class="titlesDate">
+                <div class="date">
+                    26 juin 2024
+                </div>
+                <div class="firstTitle">
+                    Mise à jour ECMAScript 2024 (ES15)
+                </div>
             </div>
             <div class="articles">
 
                 <div class="article">
                     <div class="titre">
-                        Lorem, ipsum dolor.
+                        Records et Tuples
                     </div>
                     <div class="content">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora in perferendis veritatis vel voluptatibus distinctio quas nulla voluptas itaque hic quaerat, suscipit, odit nobis officiis, modi fuga? Pariatur facilis hic, quaerat aliquid expedita voluptas?
-                        Officia perferendis rem sint voluptatibus id totam dignissimos similique animi eaque ducimus? Iusto nam rem at nihil numquam. Dolores expedita repellendus quaerat, ducimus excepturi eum, placeat, atque iusto quae maxime ullam esse
-                        omnis blanditiis voluptas. Saepe!
+                        Ces deux nouveaux types de données, introduits pour renforcer l'immutabilité, permettent une meilleure gestion des objets et des listes fixes. Les records se comportent comme des objets dont les valeurs sont immuables après leur création, et les tuples sont des listes ordonnées dont les éléments ne peuvent être modifiés.
                     </div>
                 </div>
                 <div class="article">
                     <div class="titre">
-                        Lorem, ipsum dolor. 1
+                        Temporal API
                     </div>
                     <div class="content">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt officia tempora ducimus ipsa eius iste, nulla obcaecati a sit exercitationem. Dolorem recusandae nisi delectus quibusdam ducimus. Recusandae ullam excepturi asperiores fugiat blanditiis
-                        error perspiciatis! Perferendis optio alias distinctio, ex voluptatibus, culpa totam quam eveniet architecto odit rem hic praesentium molestias quibusdam modi adipisci excepturi obcaecati cumque maxime. Dicta quibusdam sit nobis
-                        itaque, blanditiis illo recusandae totam ad sequi nulla ipsum!
+                        L'API Temporal a été introduite pour remplacer l'ancien objet Date, facilitant la gestion des dates et des heures avec des objets comme PlainDate, PlainTime, et ZonedDateTime. Elle offre une meilleure prise en charge des fuseaux horaires et des calendriers internationaux.
                     </div>
                 </div>
                 <div class="article">
                     <div class="titre">
-                        Lorem, ipsum dolor. 2
+                        Pattern Matching
                     </div>
                     <div class="content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, accusantium doloremque quas dicta architecto iure natus! Quod vel est eos consequuntur nihil sint vitae, aperiam illum laborum atque quibusdam esse delectus porro unde eius dolore blanditiis
-                        temporibus sunt placeat fuga assumenda maxime, debitis fugiat? Esse, natus quia obcaecati consequatur architecto aperiam sequi amet, vel quibusdam, voluptatum totam ut facilis optio non? Esse assumenda, suscipit tempora vel repellat
-                        itaque officiis excepturi!
+                        Inspiré d'autres langages fonctionnels, le pattern matching permet de comparer des objets à des modèles spécifiques et d'exécuter du code en conséquence. Cela rend les instructions conditionnelles plus expressives et simples à lire.
                     </div>
                 </div>
                 <div class="article">
                     <div class="titre">
-                        Lorem, ipsum dolor. 2
+                        Top-level await
                     </div>
                     <div class="content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, accusantium doloremque quas dicta architecto iure natus! Quod vel est eos consequuntur nihil sint vitae, aperiam illum laborum atque quibusdam esse delectus porro unde eius dolore blanditiis
-                        temporibus sunt placeat fuga assumenda maxime, debitis fugiat? Esse, natus quia obcaecati consequatur architecto aperiam sequi amet, vel quibusdam, voluptatum totam ut facilis optio non? Esse assumenda, suscipit tempora vel repellat
-                        itaque officiis excepturi!
+                        L'utilisation du mot-clé await directement au niveau supérieur dans les modules simplifie la gestion des promesses et du code asynchrone sans avoir besoin de fonctions supplémentaires.
                     </div>
                 </div>
                 <div class="article">
                     <div class="titre">
-                        Lorem, ipsum dolor. 2
+                        Pipeline Operator (|>)
                     </div>
                     <div class="content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, accusantium doloremque quas dicta architecto iure natus! Quod vel est eos consequuntur nihil sint vitae, aperiam illum laborum atque quibusdam esse delectus porro unde eius dolore blanditiis
-                        temporibus sunt placeat fuga assumenda maxime, debitis fugiat? Esse, natus quia obcaecati consequatur architecto aperiam sequi amet, vel quibusdam, voluptatum totam ut facilis optio non? Esse assumenda, suscipit tempora vel repellat
-                        itaque officiis excepturi!
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="date">
-                20 Octobre 2024
-            </div>
-            <div class="articles">
+                        Le Pipeline Operator (|>) en JavaScript est conçu pour améliorer la lisibilité du code en permettant de chaîner des opérations de manière plus intuitive. Il fonctionne en passant le résultat d'une expression comme entrée à une autre, créant une structure de transformation de données facile à suivre. Cette approche est particulièrement utile dans les cas où plusieurs fonctions sont appelées successivement.
 
-                <div class="article">
-                    <div class="titre">
-                        Lorem, ipsum dolor.
-                    </div>
-                    <div class="content">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora in perferendis veritatis vel voluptatibus distinctio quas nulla voluptas itaque hic quaerat, suscipit, odit nobis officiis, modi fuga? Pariatur facilis hic, quaerat aliquid expedita voluptas?
-                        Officia perferendis rem sint voluptatibus id totam dignissimos similique animi eaque ducimus? Iusto nam rem at nihil numquam. Dolores expedita repellendus quaerat, ducimus excepturi eum, placeat, atque iusto quae maxime ullam esse
-                        omnis blanditiis voluptas. Saepe!
-                    </div>
-                </div>
-                <div class="article">
-                    <div class="titre">
-                        Lorem, ipsum dolor. 1
-                    </div>
-                    <div class="content">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt officia tempora ducimus ipsa eius iste, nulla obcaecati a sit exercitationem. Dolorem recusandae nisi delectus quibusdam ducimus. Recusandae ullam excepturi asperiores fugiat blanditiis
-                        error perspiciatis! Perferendis optio alias distinctio, ex voluptatibus, culpa totam quam eveniet architecto odit rem hic praesentium molestias quibusdam modi adipisci excepturi obcaecati cumque maxime. Dicta quibusdam sit nobis
-                        itaque, blanditiis illo recusandae totam ad sequi nulla ipsum!
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="date">
-                7 Octobre 2024
-            </div>
-            <div class="articles">
+                        En résumé, au lieu d'imbriquer plusieurs appels de fonctions (comme f(g(h(x)))), vous pouvez utiliser le pipeline pour appliquer les transformations dans un ordre plus lisible : x |> h |> g |> f.
 
-                <div class="article">
-                    <div class="titre">
-                        Lorem, ipsum dolor.
-                    </div>
-                    <div class="content">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora in perferendis veritatis vel voluptatibus distinctio quas nulla voluptas itaque hic quaerat, suscipit, odit nobis officiis, modi fuga? Pariatur facilis hic, quaerat aliquid expedita voluptas?
-                        Officia perferendis rem sint voluptatibus id totam dignissimos similique animi eaque ducimus? Iusto nam rem at nihil numquam. Dolores expedita repellendus quaerat, ducimus excepturi eum, placeat, atque iusto quae maxime ullam esse
-                        omnis blanditiis voluptas. Saepe!
-                    </div>
-                </div>
-                <div class="article">
-                    <div class="titre">
-                        Lorem, ipsum dolor. 1
-                    </div>
-                    <div class="content">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt officia tempora ducimus ipsa eius iste, nulla obcaecati a sit exercitationem. Dolorem recusandae nisi delectus quibusdam ducimus. Recusandae ullam excepturi asperiores fugiat blanditiis
-                        error perspiciatis! Perferendis optio alias distinctio, ex voluptatibus, culpa totam quam eveniet architecto odit rem hic praesentium molestias quibusdam modi adipisci excepturi obcaecati cumque maxime. Dicta quibusdam sit nobis
-                        itaque, blanditiis illo recusandae totam ad sequi nulla ipsum!
-                    </div>
-                </div>
-                <div class="article">
-                    <div class="titre">
-                        Lorem, ipsum dolor. 2
-                    </div>
-                    <div class="content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, accusantium doloremque quas dicta architecto iure natus! Quod vel est eos consequuntur nihil sint vitae, aperiam illum laborum atque quibusdam esse delectus porro unde eius dolore blanditiis
-                        temporibus sunt placeat fuga assumenda maxime, debitis fugiat? Esse, natus quia obcaecati consequatur architecto aperiam sequi amet, vel quibusdam, voluptatum totam ut facilis optio non? Esse assumenda, suscipit tempora vel repellat
-                        itaque officiis excepturi!
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="date">
-                28 Septembre 2024
-            </div>
-            <div class="articles">
+                        Cela améliore la clarté du code en évitant les multiples parenthèses et rend chaque transformation facile à lire et à comprendre, surtout dans des chaînes de traitement complexes.
 
-                <div class="article">
-                    <div class="titre">
-                        Lorem, ipsum dolor.
-                    </div>
-                    <div class="content">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora in perferendis veritatis vel voluptatibus distinctio quas nulla voluptas itaque hic quaerat, suscipit, odit nobis officiis, modi fuga? Pariatur facilis hic, quaerat aliquid expedita voluptas?
-                        Officia perferendis rem sint voluptatibus id totam dignissimos similique animi eaque ducimus? Iusto nam rem at nihil numquam. Dolores expedita repellendus quaerat, ducimus excepturi eum, placeat, atque iusto quae maxime ullam esse
-                        omnis blanditiis voluptas. Saepe!
+                        <div class="exempleCode">
+                            const result = capitalize(trim(replaceSpaces(value)));  
+                        </div>
+
+                        <div class="exempleCode">
+                            const result = value <br>
+                            <div class="tab"> </div> |> replaceSpaces <br>
+                            <div class="tab"> </div> |> trim <br>
+                            <div class="tab"> </div> |> capitalize;
+
+                        </div>
+
+
                     </div>
                 </div>
             </div>
             <div class="copyright">
-                © 2 octobre 2024, Tous droits réservés.
+                © 16 octobre 2024, Tous droits réservés.
             </div>
         </section>
     </div>

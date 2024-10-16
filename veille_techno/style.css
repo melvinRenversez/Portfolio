@@ -1,6 +1,7 @@
 :root {
     --background: #000;
     --background-alternative: #232323;
+    --background-code: #515151;
     --primery-color: #fff;
     --inverse: #676767;
 }
@@ -119,10 +120,11 @@ body.actif {
 }
 
 .container {
-    width: 80%;
+    width: 85%;
     background: var(--background-alternative);
     transition: background 1s;
     padding: 30px;
+    margin-left: 30px;
 }
 
 section {
@@ -139,7 +141,8 @@ section:last-child {
     border: none !important;
 }
 
-.date {
+
+.titlesDate .date {
     margin-left: 100px;
     width: min-content;
     white-space: nowrap;
@@ -150,11 +153,19 @@ section:last-child {
     transition: color 1s, border 1s;
 }
 
+.titlesDate .firstTitle{
+    font-size: 30px;
+    padding: 50px 5%;
+    color: var(--primery-color);
+    transition: color 1s, border 1s;
+}
+
 .articles {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
     gap: 20px;
+    transition: color 1s, border 1s;
 }
 
 .article {
@@ -174,12 +185,29 @@ section:last-child {
     width: 100%;
     font-size: 30px;
     padding: 20px 20px 0px 20px;
+    transition: color 1s, border 1s;
 }
 
 .article .content {
     width: 100%;
     font-size: 20px;
     padding: 20px;
+    transition: color 1s, border 1s;
+    margin-left: 20px;
+}
+.article .content .exempleCode{
+    width: 100%;
+    font-size: 20px;
+    padding: 20px;
+    transition: color 1s, border 1s;
+    background: var(--background-code);
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.tab{
+    width: 20px;
+    display: inline-block;
 }
 
 .copyright {
