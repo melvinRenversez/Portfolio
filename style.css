@@ -611,6 +611,7 @@ input:-webkit-autofill {
     left: 20px;
     padding: 0px 10px;
     background: #232323;
+    transition: background 0s, top .4s;
 }
 
 .sec-contact .left .content-form form .input-field input:valid {
@@ -626,8 +627,8 @@ textarea {
     top: -15px;
     left: 20px;
     padding: 0px 10px;
-    background: var(--primery-color) ;
-    transition: background 1s, color 1s;
+    background: var(--contact-background) ;
+    transition: color 1s, top .4s;
 }
 
 .sec-contact .left .content-form form .input-field textarea:valid {
