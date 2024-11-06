@@ -28,6 +28,140 @@
         <section>
             <div class="titlesDate">
                 <div class="date">
+                    24 octobre 2024
+                </div>
+            </div>
+            <div class="articles">
+
+                <div class="article">
+                    <div class="titre">
+                        Deno 1.39 : Intégration avec TypeScript 5.3
+                    </div>
+                    <div class="content">   
+                        Deno 1.39 a également intégré la version 5.3 de TypeScript, offrant des améliorations de typage pour des projets complexes. Ces optimisations permettent une vérification plus stricte des types, ce qui est particulièrement utile pour les grandes bases de code ou les applications nécessitant un typage précis et robuste. Cette version de Deno simplifie la gestion des types dans les projets tout en améliorant la fiabilité du code.
+
+                        <div class="exempleCode">
+                            function add(a: number, b: number): number { return a + b; }
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="titre">
+                        Deno 1.39 : Mises à jour des dépendances pour garantir la sécurité  
+                    </div>
+                    <div class="content">   
+                        En plus des améliorations de compatibilité, Deno 1.39 a inclus des mises à jour régulières des dépendances critiques, réduisant ainsi les risques d’exposition à des vulnérabilités connues. Cette mise à jour régulière des bibliothèques et des outils de base assure que l'écosystème Deno reste sécurisé et performant, en empêchant l’utilisation de versions obsolètes contenant des failles de sécurité. Cela contribue à maintenir la fiabilité et la stabilité des projets Deno dans un environnement de développement dynamique​.
+                    </div>
+                </div>
+                
+               
+            </div>
+        </section>
+        <section>
+            <div class="titlesDate">
+                <div class="date">
+                    20 octobre 2024
+                </div>
+            </div>
+            <div class="articles">
+
+                <div class="article">
+                    <div class="titre">
+                        Bun 1.0.16 - 1.0.18 : Corrections de bugs et compatibilité améliorée avec npm
+                    </div>
+                    <div class="content">   
+                        Bun, une alternative rapide à Node.js, a publié plusieurs mises à jour mineures qui corrigent des bugs importants et améliorent la compatibilité avec un large éventail de paquets npm utilisés dans l’écosystème JavaScript. Cela permet aux développeurs d’adopter Bun plus facilement dans leurs projets existants, tout en bénéficiant de la rapidité et de la simplicité de Bun pour l’exécution côté serveur.
+
+                        <div class="exempleCode">
+                            import { createServer } from 'bun';
+                            createServer({ fetch: () => new Response('Hello World') }).listen(3000);
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="titre">
+                        Bun 1.0.16 - 1.0.18 : Optimisation des performances pour les tâches intensives
+                    </div>
+                    <div class="content">   
+                        Bun a continué d'optimiser ses performances pour les tâches intensives, comme les calculs en temps réel et la gestion de grandes quantités de données. Cela permet à Bun d’offrir des temps de réponse plus rapides et d’augmenter la capacité à gérer des applications à grande échelle, en particulier pour les applications en temps réel où la rapidité et l'efficacité sont essentielles. Ces mises à jour renforcent la réputation de Bun comme un serveur JavaScript ultra-rapide et efficace pour les développeurs à la recherche d’une alternative à Node.js​.
+                    </div>
+                </div>
+               
+            </div>
+        </section>
+        <section>
+            <div class="titlesDate">
+                <div class="date">
+                    18 octobre 2024
+                </div>
+            </div>
+            <div class="articles">
+
+                <div class="article">
+                    <div class="titre">
+                        Deno 1.39 : Retour de WebGPU
+                    </div>
+                    <div class="content">   
+                        Deno 1.39 a fait un grand retour avec l’intégration de WebGPU, une API avancée qui permet de réaliser des opérations graphiques à haute performance directement dans le navigateur ou dans des environnements de serveur. Cela ouvre des possibilités pour des applications en temps réel, comme les jeux vidéo ou les calculs graphiques pour l’apprentissage automatique, et fournit des capacités graphiques de niveau professionnel pour des projets nécessitant un rendu complexe.
+
+                        <div class="exempleCode">
+                            const adapter = await navigator.gpu.requestAdapter();
+                            const device = await adapter.requestDevice();
+                        </div>
+
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="titre">
+                        Deno 1.39 : Amélioration de la compatibilité avec Node.js
+                    </div>
+                    <div class="content">   
+                        Une des évolutions majeures de Deno 1.39 est l'amélioration de sa compatibilité avec Node.js. Grâce à cette mise à jour, il devient plus facile pour les développeurs qui migrent de Node.js vers Deno d'intégrer des modules Node.js sans nécessiter de refactorisations majeures de leur code. Cette interopérabilité permet aux projets utilisant Node.js de tirer parti des avantages de Deno, tels qu'une meilleure sécurité et un environnement de développement moderne. Ce changement facilite également la transition pour les équipes qui souhaitent adopter Deno progressivement tout en utilisant encore des outils et des paquets Node.js existants​.
+                    </div>
+                </div>
+               
+            </div>
+        </section>
+        <section>
+            <div class="titlesDate">
+                <div class="date">
+                    17 octobre 2024 
+                </div>
+            </div>
+            <div class="articles">
+
+                <div class="article">
+                    <div class="titre">
+                        Node.js 21 : Gestion des permissions renforcée
+                    </div>
+                    <div class="content">
+                        La version 21 de Node.js a introduit une nouvelle approche de gestion des permissions, permettant un contrôle plus fin sur l’accès aux ressources critiques du système, comme le réseau et le système de fichiers. Cela améliore considérablement la sécurité des applications Node.js en empêchant des accès non autorisés à des ressources sensibles. Les développeurs peuvent ainsi restreindre les actions des processus Node.js pour protéger les données sensibles et les infrastructures.
+
+                        <div class="exempleCode">
+                            fs.accessSync('./file.txt', fs.constants.R_OK | fs.constants.W_OK);
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="article">
+                    <div class="titre">
+                        Node.js 21 : Optimisation des performances et réduction du temps de démarrage
+                    </div>
+                    <div class="content">
+                        Node.js 21 met l’accent sur la réduction du temps de démarrage des applications, un facteur crucial pour les applications modernes qui nécessitent une réponse rapide. Cette version inclut des optimisations qui permettent un démarrage plus rapide et des performances améliorées dans les environnements de production, en particulier pour les applications qui traitent des volumes importants de données. Cela se traduit par une meilleure efficacité dans l'exécution des tâches asynchrones et une gestion plus fluide des flux de données lourds​.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="titlesDate">
+                <div class="date">
                     15 octobre 2024
                 </div>
             </div>

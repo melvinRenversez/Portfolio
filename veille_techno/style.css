@@ -198,8 +198,9 @@ section:last-child {
 }
 
 .article .content .exempleCode{
-    width: 100%;
-    font-size: 20px;
+    width: 90%;
+    text-wrap: nowrap;
+    font-size: 16px;
     padding: 20px;
     transition: color 1s, border 1s;
     background: var(--background-code);
