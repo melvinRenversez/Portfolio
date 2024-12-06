@@ -12,14 +12,20 @@ const popupDiv = document.getElementById('popup')
 const colorSwitch = document.getElementById('colorSwitch')
 const circle = document.getElementById('circle')
 
+const secCv = document.getElementById('sec-cv')
+
 var actif = false
 
+
 ciDessus.addEventListener('click', (e) => {
+    const scroll = secCv.offsetTop + secCv.offsetHeight / 2 - window.innerHeight / 2;
+
     window.scrollTo({
-        top: 1200,
+        top: scroll,
         behavior: 'smooth'
     });
-})
+});
+
 
 accueil.addEventListener('click', (e) => {
     window.scrollTo({
@@ -66,8 +72,6 @@ contact.addEventListener('click', (e) => {
 
 window.addEventListener('scroll', () => {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-    console.log(`Scroll: ${scrollTop}px`);
 
     if (scrollTop < 500) {
         removeActif()
