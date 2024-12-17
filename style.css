@@ -689,7 +689,15 @@ textarea {
     align-items: center;
 }
 
-.sec-contact .right .box .border svg {
+.sec-contact .right .box a {
+    background: red;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primery-color);
+}
+
+.sec-contact .right .box a .border svg {
     padding: 5px;
     border: 1px solid var(--primery-color);
     border-radius: 5px;
@@ -700,23 +708,10 @@ textarea {
     justify-content: center;
     margin-right: 10px;
     transition: background 1s, color 1s, border 1s !important;
-}
-
-.sec-contact .right .box .border svg {
-    /* padding: 5px; */
-    height: 30px;
     fill: var(--primery-color);
-    transition: background 1s, color 1s, fill 1s !important;
 }
 
-.sec-contact .right h1 {
-    color: var(--primery-color);
-    transition: background 1s, color 1s;
-}
-
-.sec-contact .right h1 a {
-    color: var(--primery-color);
-    text-decoration: none;
+.sec-contact .right .box a h1 {
     transition: background 1s, color 1s;
 }
 
