@@ -235,7 +235,7 @@ li.actif::after {
     background: var(--primery-color);
     position: absolute;
     left: 0;
-    bottom: -18px;
+    bottom: -19px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     transition: background 1s, color 1s;
