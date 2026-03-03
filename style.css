@@ -663,6 +663,13 @@ svg path {
 
     transition: 0.3s;
     cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.gap {
+    flex: 1;
 }
 
 
