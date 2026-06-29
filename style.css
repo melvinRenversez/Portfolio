@@ -1034,3 +1034,7 @@ strong {
 ::-webkit-scrollbar-thumb:hover {
     background: #4f46e5;
 }
+
+.redirectNote {
+    color: #bbb;
+}
